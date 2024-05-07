@@ -1,0 +1,9 @@
+/target/
+
+/wndb*/
+/wndb*
+/json/
+/json311/
+**/_*/
+**/_*
+/dependency-reduced-pom.xml
