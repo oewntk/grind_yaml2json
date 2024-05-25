@@ -7,7 +7,7 @@
 
   <groupId>io.github.oewntk</groupId>
   <artifactId>wndb2json</artifactId>
-  <version>2.1.0</version>
+  <version>2.1.1</version>
   <name>wndb_to_json</name>
   <description>Read WNDB Wordnet model and export it to json files.</description>
   <url>https://github.com/oewntk/grind_wndb2json</url>
@@ -23,17 +23,17 @@
     <dependency>
       <groupId>io.github.oewntk</groupId>
       <artifactId>model</artifactId>
-      <version>2.1.0</version>
+      <version>2.1.1</version>
     </dependency>
     <dependency>
       <groupId>io.github.oewntk</groupId>
       <artifactId>fromwndb</artifactId>
-      <version>2.1.0</version>
+      <version>2.1.1</version>
     </dependency>
     <dependency>
       <groupId>io.github.oewntk</groupId>
       <artifactId>tojson</artifactId>
-      <version>2.1.0</version>
+      <version>2.1.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -217,7 +217,7 @@
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <manifestEntries>
-                    <Build-Number>2.1.0</Build-Number>
+                    <Build-Number>2.1.1</Build-Number>
                   </manifestEntries>
                   <mainClass>org.oewntk.grind.wndb2json.Grind</mainClass>
                 </transformer>
