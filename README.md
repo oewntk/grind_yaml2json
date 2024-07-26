@@ -5,49 +5,47 @@
 <img width="150"src="images/mavencentral.png" alt="MavenCentral">
 </p>
 
-# Open English Wordnet YAML-to-SQL grinder
+# Open English Wordnet WNDB-to-JSON grinder
 
-This library reads a model from YAML files and writes it to SQL format.
+This library reads a model from WNDB files and writes it to JSON format.
 
-Project [grind_yaml2sql](https://github.com/oewntk/grind_yaml2sql)
+Project [grind_wndb2json](https://github.com/oewntk/grind_wndb2json)
 
 See also [model](https://github.com/oewntk/model/blob/master/README.md).
 
-See also [fromyaml](https://github.com/oewntk/fromyaml/blob/master/README.md).
+See also [fromwndb](https://github.com/oewntk/fromwndb/blob/master/README.md).
 
-See also [tosql](https://github.com/oewntk/tosql/blob/master/README.md).
+See also [tojson](https://github.com/oewntk/tojson/blob/master/README.md).
 
 See also [oewntk](https://github.com/oewntk)
 and [globalwordnet/english-wordnet](https://github.com/globalwordnet/english-wordnet).
 
 ## Dataflow
 
-![Dataflow](images/dataflow_yaml2sql.png  "Dataflow")
+![Dataflow](images/dataflow_wbdb2json.png  "Dataflow")
 
-This library reads from the OEWN distribution YAML files and other YAML files that contain extra data.
+This library reads from the WNDB files.
 
-This output conforms to the **SQL** standards.
+This output conforms to the **JSON** standards.
 
 ## Command line
 
-`grind.sh [YAML] [YAML2] [SQL]`
+`grind.sh [WNDB] [JSON]`
 
-grinds the SQL database
+grinds the JSON database
 
 *where*
 
-[YAML] directory where OEWN distribution YAML files are
+[WNDB] directory where WNDB files are
 
-[YAML2] directory where extra YAML files are
-
-[SQL] directory where SQL files are output
+[JSON] path to JSON output
 
 ## Maven Central
 
 		<groupId>io.github.oewntk</groupId>
-		<artifactId>yaml2sql</artifactId>
+		<artifactId>wndb2json</artifactId>
 		<version>1.0.0</version>
 
 ## Dependencies
 
-![Dependencies](images/grind-yaml2sql.png  "Dataflow")
+![Dependencies](images/grind-wndb2json.png  "Dataflow")
