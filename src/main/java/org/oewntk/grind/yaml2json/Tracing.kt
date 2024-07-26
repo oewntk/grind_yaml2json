@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024. Bernard Bou.
  */
-package org.oewntk.grind.wndb2json
+package org.oewntk.grind.yaml2json
 
 import java.io.PrintStream
 import java.text.DecimalFormat

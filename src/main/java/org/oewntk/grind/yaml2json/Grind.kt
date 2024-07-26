@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2021-2024. Bernard Bou.
  */
-package org.oewntk.grind.wndb2json
+package org.oewntk.grind.yaml2json
 
 import org.oewntk.json.out.ModelConsumer
-import org.oewntk.wndb.`in`.Factory
+import org.oewntk.yaml.`in`.Factory
 import java.io.File
 
 /**

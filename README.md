@@ -5,15 +5,15 @@
 <img width="150"src="images/mavencentral.png" alt="MavenCentral">
 </p>
 
-# Open English Wordnet WNDB-to-JSON grinder
+# Open English Wordnet YAML-to-JSON grinder
 
-This library reads a model from WNDB files and writes it to JSON format.
+This library reads a model from YAML files and writes it to JSON format.
 
-Project [grind_wndb2json](https://github.com/oewntk/grind_wndb2json)
+Project [grind_yaml2json](https://github.com/oewntk/grind_yaml2json)
 
 See also [model](https://github.com/oewntk/model/blob/master/README.md).
 
-See also [fromwndb](https://github.com/oewntk/fromwndb/blob/master/README.md).
+See also [fromyaml](https://github.com/oewntk/fromyaml/blob/master/README.md).
 
 See also [tojson](https://github.com/oewntk/tojson/blob/master/README.md).
 
@@ -22,30 +22,32 @@ and [globalwordnet/english-wordnet](https://github.com/globalwordnet/english-wor
 
 ## Dataflow
 
-![Dataflow](images/dataflow_wbdb2json.png  "Dataflow")
+![Dataflow](images/dataflow_yaml2json.png  "Dataflow")
 
-This library reads from the WNDB files.
+This library reads from the OEWN distribution YAML files and other YAML files that contain extra data.
 
 This output conforms to the **JSON** standards.
 
 ## Command line
 
-`grind.sh [WNDB] [JSON]`
+`grind.sh [YAML] [YAML2] [JSON]`
 
 grinds the JSON database
 
 *where*
 
-[WNDB] directory where WNDB files are
+[YAML] directory where OEWN distribution YAML files are
 
-[JSON] path to JSON output
+[YAML2] directory where extra YAML files are
+
+[JSON] path to output JSON file
 
 ## Maven Central
 
 		<groupId>io.github.oewntk</groupId>
-		<artifactId>wndb2json</artifactId>
+		<artifactId>yaml2json</artifactId>
 		<version>1.0.0</version>
 
 ## Dependencies
 
-![Dependencies](images/grind-wndb2json.png  "Dataflow")
+![Dependencies](images/grind-yaml2json.png  "Dataflow")
