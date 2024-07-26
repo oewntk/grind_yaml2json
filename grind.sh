@@ -6,22 +6,22 @@
 
 IN="$1"
 if [ -z "$1" ]; then
-	IN=wndb31
+	IN=yaml
 fi
-echo "WNDB:  ${IN}" 1>&2;
+echo "YAML:  ${IN}" 1>&2;
 
 IN2="$2"
 if [ -z "$2" ]; then
-	IN2=wndb2
+	IN2=yaml2
 fi
-echo "WNDB2: ${IN2}" 1>&2;
+echo "YAML2: ${IN2}" 1>&2;
 
-OUTDIR="$3"
+OUT="$3"
 if [ -z "$3" ]; then
-	OUTDIR=sql31/data
+	OUT=json/oewn.json
 fi
-mkdir -p "${OUTDIR}"
-echo "DIR:   ${OUTDIR}" 1>&2;
+mkdir -p "${OUT}"
+echo "OUT:   ${OUT}" 1>&2;
 
-jar=target/wndb2json-2.1.1-uber.jar
-java -ea -jar "${jar}" "${IN}" "${IN2}" "${OUTDIR}"
+jar=target/yaml2json-2.1.1-uber.jar
+java -ea -jar "${jar}" "${IN}" "${IN2}" "${OUT}"
