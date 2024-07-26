@@ -23,5 +23,7 @@ fi
 mkdir -p "${OUT}"
 echo "OUT:   ${OUT}" 1>&2;
 
+opts="-pretty"
+
 jar=target/yaml2json-2.1.1-uber.jar
-java -ea -jar "${jar}" "${IN}" "${IN2}" "${OUT}"
+java -ea -jar "${jar}" ${opts} "${IN}" "${IN2}" "${OUT}"

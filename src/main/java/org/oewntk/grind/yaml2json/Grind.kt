@@ -21,10 +21,17 @@ object Grind {
      */
     @JvmStatic
     fun main(args: Array<String>) {
-        val iArg = 0
+        var iArg = 0
 
         // Tracing
         val startTime = Tracing.start()
+
+        // pretty print
+        var prettyPrint = false
+        if (args[iArg] == "-pretty") {
+            prettyPrint = true
+            iArg++
+        }
 
         // Input
         val inDir = File(args[iArg])
@@ -49,7 +56,7 @@ object Grind {
 
         // Consume model
         Tracing.progress("before model is consumed,", startTime)
-        ModelConsumer(outFile).accept(model!!)
+        ModelConsumer(outFile, prettyPrintFlag = prettyPrint).accept(model!!)
         Tracing.progress("after model is consumed,", startTime)
 
         // End
