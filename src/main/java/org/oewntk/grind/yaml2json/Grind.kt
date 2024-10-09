@@ -8,7 +8,7 @@ import org.oewntk.yaml.`in`.Factory
 import java.io.File
 
 /**
- * Main class that generates the WN database in the SQL format from the WNDB format
+ * Main class that generates the WN database in the SQL format from the YAML format
  *
  * @author Bernard Bou
  */

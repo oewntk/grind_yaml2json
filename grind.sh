@@ -6,15 +6,15 @@
 
 IN="$1"
 if [ -z "$1" ]; then
-	IN=wndb31
+	IN=yaml
 fi
-echo "WNDB:  ${IN}" 1>&2;
+echo "YAML:  ${IN}" 1>&2;
 
 IN2="$2"
 if [ -z "$2" ]; then
-	IN2=wndb2
+	IN2=yaml2
 fi
-echo "WNDB2: ${IN2}" 1>&2;
+echo "YAML2: ${IN2}" 1>&2;
 
 OUTDIR="$3"
 if [ -z "$3" ]; then
@@ -25,5 +25,5 @@ echo "DIR:   ${OUTDIR}" 1>&2;
 
 opts="-pretty"
 
-jar=target/wndb2json-2.1.2-uber.jar
+jar=target/yaml2json-2.1.2-uber.jar
 java -ea -jar "${jar}" ${opts} "${IN}" "${IN2}" "${OUTDIR}"
