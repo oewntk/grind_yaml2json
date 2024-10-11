@@ -25,5 +25,5 @@ echo "DIR:   ${OUTDIR}" 1>&2;
 
 opts="-pretty"
 
-jar=target/yaml2json-2.1.2-uber.jar
+jar=target/yaml2json-2.1.3-uber.jar
 java -ea -jar "${jar}" ${opts} "${IN}" "${IN2}" "${OUTDIR}"
