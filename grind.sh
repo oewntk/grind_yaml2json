@@ -16,14 +16,15 @@ if [ -z "$2" ]; then
 fi
 echo "YAML2: ${IN2}" 1>&2;
 
-OUTDIR="$3"
+OUTFILE="$3"
 if [ -z "$3" ]; then
-	OUTDIR=sql31/data
+	OUTFILE=json/oewn.json
 fi
-mkdir -p "${OUTDIR}"
-echo "DIR:   ${OUTDIR}" 1>&2;
+mkdir -p $(dirname "${OUTDIR}")
+echo "OUT:   ${OUTFILE}" 1>&2;
 
 opts="-pretty"
 
 jar=target/yaml2json-2.1.3-uber.jar
-java -ea -jar "${jar}" ${opts} "${IN}" "${IN2}" "${OUTDIR}"
+java -ea -jar "${jar}" ${opts} "${IN}" "${IN2}" "${OUTFILE}"
+

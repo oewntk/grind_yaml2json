@@ -26,10 +26,10 @@ Z='\u001b[0m'
 
 DATADIR=json
 JSON="${DATADIR}/oewn.json"
-echo "pack to ${DISTDIR} from ${DATADIR}"
+DISTDIR=dist
 
 # O U T
-ZIP_ARCHIVE=${DATADIR}/oewn-${dbtag}.json.zip
+ZIP_ARCHIVE=${DISTDIR}/oewn-${dbtag}.json.zip
 
 # M A I N
 
