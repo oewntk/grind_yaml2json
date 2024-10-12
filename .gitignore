@@ -6,4 +6,5 @@
 /json311/
 **/_*/
 **/_*
+/dist/*.zip
 /dependency-reduced-pom.xml
