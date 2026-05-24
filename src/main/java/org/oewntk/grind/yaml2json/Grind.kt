@@ -26,6 +26,13 @@ object Grind {
         // Tracing
         val startTime = Tracing.start()
 
+        // verbose
+        var verbose = false
+        if (args[iArg] == "-verbose") {
+            verbose = true
+            iArg++
+        }
+
         // pretty print
         var prettyPrint = false
         if (args[iArg] == "-pretty") {
@@ -54,7 +61,7 @@ object Grind {
 
         // Supply model
         Tracing.progress("before model is supplied,", startTime)
-        val model = Factory(inDir, inDir2).get()
+        val model = Factory(inDir, inDir2, verbose = verbose).get()
         //Tracing.psInfo.printf("[Model] %s%n%s%n%n", Arrays.toString(model.getSources()), model.info())
         Tracing.progress("after model is supplied,", startTime)
 
