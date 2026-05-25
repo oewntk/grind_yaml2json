@@ -2,9 +2,11 @@
 
 /yaml*/
 /yaml*
-/json/
-/json311/
+/json*/
+/json*
 **/_*/
 **/_*
-/dist/*.zip
+**/*.jar
+/dist/
+.dist
 /dependency-reduced-pom.xml
