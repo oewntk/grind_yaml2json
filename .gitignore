@@ -4,9 +4,13 @@
 /yaml*
 /json*/
 /json*
+/dist/
+/dist
+/out*/
+/out*
+
 **/_*/
 **/_*
 **/*.jar
-/dist/
-.dist
+
 /dependency-reduced-pom.xml
