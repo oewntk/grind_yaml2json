@@ -8,6 +8,8 @@
 /dist
 /out*/
 /out*
+/xml*/
+/xml*
 
 **/_*/
 **/_*
