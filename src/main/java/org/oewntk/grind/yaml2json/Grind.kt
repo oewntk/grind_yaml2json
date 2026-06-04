@@ -67,7 +67,7 @@ object Grind {
 
         // Consume model
         Tracing.progress("before model is consumed,", startTime)
-        ModelConsumer(outFile, prettyPrintFlag = prettyPrint).accept(model!!)
+        ModelConsumer(outFile, prettyPrint = prettyPrint).accept(model!!)
         Tracing.progress("after model is consumed,", startTime)
 
         // End
