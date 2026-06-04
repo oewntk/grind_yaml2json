@@ -3,7 +3,7 @@
  */
 package org.oewntk.grind.yaml2json
 
-import org.oewntk.json.out.ModelConsumer
+import org.oewntk.json.out.model.ModelConsumer
 import org.oewntk.yaml.`in`.Factory
 import java.io.File
 
