@@ -6,6 +6,7 @@ package org.oewntk.grind.yaml2json
 import kotlinx.cli.ArgParser
 import kotlinx.cli.ArgType
 import kotlinx.cli.default
+import org.oewntk.grind.yaml2json.Tracing.progress
 import org.oewntk.yaml.`in`.Factory
 import java.io.File
 import org.oewntk.json.out.data.ModelConsumer as DataJsonModelConsumer
@@ -88,20 +89,20 @@ object Grind {
         Tracing.psInfo.println("[Output] " + outFile.absolutePath)
 
         // Supply model
-        Tracing.progress("before model is supplied,", startTime)
+        progress("before model is supplied", startTime)
         val model = Factory(inDir, inDir2, verbose = verbose).get()!!
-        Tracing.progress("after model is supplied,", startTime)
+        progress("after model is supplied", startTime)
 
         // Consume model
-        Tracing.progress("before model is consumed,", startTime)
+        progress("before model is consumed", startTime)
         when (outSerialization) {
             SerializationMode.OEWN -> OEWNJsonModelConsumer(outFile, split = !outOne, prettyPrint = outPretty, generated = !outMerge, verbose = verbose).accept(model)
             SerializationMode.DATA -> DataJsonModelConsumer(outFile, split = !outOne, prettyPrint = outPretty, verbose = verbose).accept(model)
             SerializationMode.MODEL -> ModelJsonModelConsumer(outFile, prettyPrint = outPretty, verbose = verbose).accept(model)
         }
-        Tracing.progress("after model is consumed,", startTime)
+        progress("after model is consumed", startTime)
 
         // End
-        Tracing.progress("total,", startTime)
+        progress("end", startTime)
     }
 }
