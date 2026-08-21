@@ -27,7 +27,7 @@ echo "OUT:   ${OUTFILE}" 1>&2;
 
 opts="-pretty"
 
-jar=yaml2json-3.0.1-uber.jar
+jar=yaml2json-3.0.1-SNAPSHOT-uber.jar
 if [ ! -e "${jar}" ]; then
   if [ ! -e "target/${jar}" ]; then
     echo "Non existing uber jar" >&2
